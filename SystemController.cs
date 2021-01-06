@@ -67,6 +67,9 @@ namespace SystemController
         [DllImport("SystemController.so", CallingConvention = CallingConvention.Cdecl)]
         extern public static int SystemFactoryResetNetworkShell();
 
+        [DllImport("SystemController.so", CallingConvention = CallingConvention.Cdecl)]
+        extern public static int SystemKillAPI();
+
         public static void DoSystemReboot()
         {
             int result = -1;
@@ -140,6 +143,13 @@ namespace SystemController
         {
             int result = -1;
             result = SystemFactoryResetNetworkShell();
+            Console.WriteLine("Result : " + result);
+        }
+
+        public static void DoSystemKillAPI()
+        {
+            int result = -1;
+            result = SystemKillAPI();
             Console.WriteLine("Result : " + result);
         }
     }

@@ -401,3 +401,10 @@ int SetNetworkInfo(NetworkInfo* info)
 
 	return result;
 }
+
+EXT_API int SystemKillAPI()
+{
+	std::string cmd;
+	cmd = "kill $(ps -ef | grep K_Face_XT_API | awk '/home/ {gsub(\"root\", \"\", $2); print $2}')";
+	return system(cmd.c_str());
+}

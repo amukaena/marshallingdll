@@ -37,3 +37,5 @@ EXT_API void SystemGetResourceInfo(ResourceInfo* info);
 
 EXT_API int SystemFactoryResetNetworkShell();
 EXT_API void SystemGetNetworkInfoShell(NetworkInfo* info);
+
+EXT_API int SystemKillAPI();
